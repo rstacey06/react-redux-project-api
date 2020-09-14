@@ -1,25 +1,23 @@
 class GoalsController < ApplicationController
+  # before any action, our set_todo and set_goal methods will run
     before_action :set_todo
     before_action :set_goal, only: [:show]
 
+    # load all goals, which belong to a todo
     def index
-        @goals = @todo.goals.all
-        render json: @goals
+      @goals = @todo.goals.all
+      render json: @goals
     end
 
+    # dispaly an goal by id
     def show
         @goal = Goal.find(params[:id])
         render json: @goal
     end
 
+    # create a new goal, nested under a todo
     def create
         @goal = @todo.goals.create(goal_params)
-        render json: @goal
-    end
-
-    def toggle
-        @goal = Goal.find(params[:id])
-        @goal.toggle!(:completed)
         render json: @goal
     end
 
