@@ -16,4 +16,5 @@ Goal.create(description: "Milk", todo_id: 13, completed: 0)
 Goal.create(description: "Bread", todo_id: 13, completed: 0)
 
 Goal.create(description: "Higher a Contractor", todo_id: 12, completed: 0)
+
 Goal.create
