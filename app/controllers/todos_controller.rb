@@ -1,6 +1,5 @@
 class TodosController < ApplicationController
-  
-    before_action :set_todo, only: [:show, :destroy, :toggle]
+  before_action :set_todo, only: [:show, :destroy, :toggle]
 
     def index
         @todos = Todo.all

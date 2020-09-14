@@ -1,5 +1,4 @@
 class GoalsController < ApplicationController
-  
     before_action :set_todo
     before_action :set_goal, only: [:show]
 
